@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/vendors/_font-family.scss","../scss/base/_reset.scss"],"names":[],"mappings":"AACQ,2GCDR,EACE,gBACA,sBACA,SACA,UACA,0CACA","file":"styles.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/vendors/_font-family.scss","../scss/base/_reset.scss","../scss/base/_typography.scss"],"names":[],"mappings":"AACQ,2GCDR,EACE,gBACA,sBACA,SACA,UACA,0CACA,gBCNF,YACE,mCAEF,YACE,mCAEF,YACE,iCACA,gBAEF,QACE,iBAEF,KACE,mCAEF,MACE,mCACA","file":"styles.css"}

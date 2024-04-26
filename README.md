@@ -13,8 +13,6 @@
 ### I have used
 - "https://api.dictionaryapi.dev/api/v2/entries/en/`(word)`" - API to fetch data from
 
-
-
 ### Compile sass using command line:
 1. See if you have sass installed:
     ~~~

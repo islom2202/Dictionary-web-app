@@ -1,0 +1,20 @@
+.heading--1{
+  font-size: clamp(3.2rem, 5vw, 6.4rem);
+}
+.heading--2{
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+}
+.heading--3{
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-weight: 400;
+}
+.source{
+  font-size: 1.6rem;
+}
+p,li{
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+input{
+  font-size: clamp(1.6rem, 1.5vw, 2rem);
+  cursor: text;
+}
