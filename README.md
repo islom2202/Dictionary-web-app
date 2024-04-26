@@ -1,5 +1,5 @@
 ### The Frontend Mentor Challenge
-#### Your users should be able to:
+### Your users should be able to:
 - Search for words using the input field
 - See the Free Dictionary API's response for the searched word
 - See a form validation message when trying to submit a blank form
@@ -9,3 +9,26 @@
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 - Bonus: Have the correct color scheme chosen for them based on their computer preferences. Hint: Research prefers-color-scheme in CSS.
+
+### I have used
+- "https://api.dictionaryapi.dev/api/v2/entries/en/`(word)`" - API to fetch data from
+
+
+
+### Compile sass using command line:
+1. See if you have sass installed:
+    ~~~
+    sass --version
+    ~~~
+2. If not install it globally:
+    ~~~
+    npm install -g sass
+    ~~~
+3. To compile scss into css type folowing:
+    ~~~
+    sass --watch styles.scss:styles.css
+    ~~~
+4. To compile scss into minified css type folowing:
+   ~~~
+   sass --style compressed -w styles.scss:styles.min.css
+   ~~~
