@@ -1,1 +1,124 @@
-@import"https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap";*{font-size:62.5%;box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);list-style:none}.heading--1{font-size:clamp(3.2rem,5vw,6.4rem)}.heading--2{font-size:clamp(1.8rem,2vw,2.4rem)}.heading--3{font-size:clamp(1.6rem,2vw,2rem);font-weight:400}.source{font-size:1.6rem}p,li{font-size:clamp(1.5rem,2vw,1.8rem)}input{font-size:clamp(1.6rem,1.5vw,2rem);cursor:text}/*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
+}
+header .settings, header .search {
+  border: 1px solid;
+}
+header .settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding-inline: 5%;
+  width: 100%;
+  position: relative;
+}
+header .settings__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+header .settings__right__fonts {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+header .settings__right__fonts summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+header .settings__right__fonts ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  position: absolute;
+  inset: 3.3rem auto auto 0;
+  border: 1px solid;
+  background-color: #FFFFFF;
+}
+header .settings__right__fonts ul li {
+  padding: 0.5rem 1rem;
+}
+header .settings__right__fonts ul li:hover {
+  color: #A445ED;
+}
+header .settings__right__switcher {
+  border: 1px solid;
+  display: flex;
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+  border-radius: 1rem;
+  background-color: #757575;
+}
+header .settings__right__switcher input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+header .settings__right__switcher button {
+  position: absolute;
+  inset: 50% auto auto 5%;
+  width: 50%;
+  height: 86%;
+  background-color: black;
+  border-radius: 1rem;
+  transform: translateY(-53%);
+}
+header .settings__right__switcher:has(input:checked) button {
+  inset: 50% 5% auto auto;
+}
+header .settings__right__switcher button {
+  background-color: #FFFFFF;
+}
+
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  list-style: none;
+  border: none;
+}
+
+.heading--1 {
+  font-size: clamp(3.2rem, 5vw, 6.4rem);
+}
+
+.heading--2 {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+}
+
+.heading--3 {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-weight: 400;
+}
+
+.source {
+  font-size: 1.6rem;
+}
+
+p, li, details, summary {
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+
+input {
+  font-size: clamp(1.6rem, 1.5vw, 2rem);
+  cursor: text;
+}
+
+/*# sourceMappingURL=styles.css.map */

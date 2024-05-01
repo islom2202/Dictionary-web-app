@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/icons/icons8-dictionary-96.png">
   <title>Dictionary web app</title>
 </head>
 <body>
@@ -12,21 +13,34 @@
       <svg width="34" viewBox="0 0 34 38" class="icon-book">
         <use href="assets/icons.svg#book"></use>
       </svg>
-      <div>
-        <div class="font">
-          <p>Sand serif</p>
-          <img src="assets/icons/arrow-down.svg" alt="arrow-down">
-        </div>
-        <div class="switcher">
+      <div class="settings__right">
+          <details class="settings__right__fonts">
+            <summary>
+              <p>Sand serif</p>
+              <svg width="14" height="8" viewBox="0 0 14 8">
+                <use href="assets/icons.svg#arrow-down"></use>
+              </svg>
+            </summary>
+            <ul>
+              <li value="sans-serif">Sans Serif</li>
+              <li value="serif">Serif</li>
+              <li value="mono">Mono</li>
+            </ul>
+          </details>
+        <div class="settings__right__switcher">
           <input type="checkbox" class="switcher__checkbox">
-          <span class="switcher__ball"></span>
+          <button class="switcher__ball"></button>
         </div>
+        <svg width="22" viewBox="0 0 22 22">
+          <use href="assets/icons.svg#moon"></use>
+        </svg>
       </div>
     </section>
-    <section class="search"></section>
+    <section class="search">
+      <p>search</p>
+    </section>
   </header>
   <main>
-    <input type="text">
   </main>
 </body>
 </html>

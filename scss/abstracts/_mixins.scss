@@ -1,5 +1,52 @@
-@mixin makeResponsive($breakpoint){
+@mixin responsify($breakpoint){
   @media (min-width: $breakpoint) {
     @content;
+  }
+};
+
+@mixin flexify($direction:row, $justify-content:start, $align-items: start, $gap:0){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap
+};
+
+@mixin gridify($columns, $gap:0){
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+};
+
+@mixin positify($postion, $inset){
+  position: $postion;
+  inset: $inset;
+};
+
+@mixin switchify($checkbox, $btn, $width, $height){
+  border: 1px solid;
+  display: flex;
+  width: $width;
+  height: $height;
+  position: relative;
+  border-radius: 1rem;
+  #{$checkbox}{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+  };
+  #{$btn}{
+    position: absolute;
+    inset: 50% auto auto 5%;
+    width: 50%;
+    height: 86%;
+    background-color: black;
+    border-radius: 1rem;
+    transform: translateY(-53%);
+  }
+  &:has(#{$checkbox}:checked) #{$btn}{
+    inset: 50% 5% auto auto;
   }
 }

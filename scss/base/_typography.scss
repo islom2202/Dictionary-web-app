@@ -11,7 +11,7 @@
 .source{
   font-size: 1.6rem;
 }
-p,li{
+p,li, details, summary{
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
 input{
