@@ -7,30 +7,10 @@ header{
   .settings{
     @include flexify(row, space-between, center);
     padding-inline: $inline--1;
+    padding-block: $block--1;
     width: 100%;
-    position: relative;
     &__right{
       @include flexify(row, start, center, 2rem);
-      // &__fonts{
-      //   user-select: none;
-      //   cursor: pointer;
-      //   position: relative;
-      //   summary{
-      //     @include flexify(row, start, center, 1rem);
-      //   }
-      //   ul{
-      //     @include gridify(1fr);
-      //     @include positify(absolute, 3.3rem auto auto 0);
-      //     border: 1px solid;
-      //     background-color: $white--1;
-      //     li{
-      //       padding: .5rem 1rem;
-      //     }
-      //     li:hover{
-      //       color: $purple--2;
-      //     }
-      //   }
-      // }
     }
   }
 }
@@ -39,6 +19,7 @@ header{
 @include responsify($breakpoint--2){
   header{
     padding-inline: $inline--2;
+    padding-block: $block--2;
   }
 }
 
@@ -46,5 +27,6 @@ header{
 @include responsify($breakpoint--3){
   header{
     padding-inline: $inline--3;
+    padding-block: $block--3;
   }
 }

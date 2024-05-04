@@ -1,124 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 0;
-}
-header .settings {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  padding-inline: 5%;
-  width: 100%;
-  position: relative;
-}
-header .settings__right {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  gap: 2rem;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 5 | @forward "./themes";
+ *   | ^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   scss\styles.scss 5:1  root stylesheet */
 
-@media (min-width: 768px) {
-  header {
-    padding-inline: 7%;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 5 \2502  @forward \"./themes\";\a   \2502  ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\styles.scss 5:1  root stylesheet";
 }
-@media (min-width: 1450px) {
-  header {
-    padding-inline: 20%;
-  }
-}
-* {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
-  list-style: none;
-  border: none;
-  outline: none;
-}
-
-::selection {
-  background-color: red;
-}
-
-.heading--1 {
-  font-size: clamp(3.2rem, 5vw, 6.4rem);
-}
-
-.heading--2 {
-  font-size: clamp(1.8rem, 2vw, 2.4rem);
-}
-
-.heading--3 {
-  font-size: clamp(1.6rem, 2vw, 2rem);
-  font-weight: 400;
-}
-
-.source {
-  font-size: 1.6rem;
-}
-
-p, li, select, option, th, td {
-  font-size: clamp(1.5rem, 2vw, 1.8rem);
-}
-
-input {
-  font-size: clamp(1.6rem, 1.5vw, 2rem);
-  cursor: text;
-}
-
-.component-switcher {
-  display: flex;
-  width: 4rem;
-  height: 2rem;
-  position: relative;
-  border-radius: 1rem;
-  background-color: #757575;
-  border: 3px solid #757575;
-}
-.component-switcher input {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  z-index: 1;
-  cursor: pointer;
-}
-.component-switcher button {
-  position: absolute;
-  inset: 0 auto auto 0;
-  width: 48%;
-  height: 100%;
-  border-radius: 1rem;
-}
-.component-switcher:has(input:checked) button {
-  inset: 0 0 auto auto;
-}
-.component-switcher:hover {
-  background-color: #A445ED;
-  border-color: #A445ED;
-}
-.component-switcher button {
-  background-color: #FFFFFF;
-}
-
-.dropdown {
-  appearance: none;
-  padding-right: 2.7rem;
-  background-image: url("../../assets/icons/arrow-down.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-.dropdown option:checked {
-  color: #A445ED;
-  font-weight: 500;
-}
-
-/*# sourceMappingURL=styles.css.map */
