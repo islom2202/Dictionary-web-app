@@ -11,9 +11,10 @@
 .source{
   font-size: 1.6rem;
 }
-p,li, details, summary{
+p,li,select, option, th, td{
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
+
 input{
   font-size: clamp(1.6rem, 1.5vw, 2rem);
   cursor: text;

@@ -6,4 +6,8 @@
   -webkit-tap-highlight-color: transparent;
   list-style: none;
   border: none;
+  outline: none;
+}
+::selection{
+    background-color: red;
 }

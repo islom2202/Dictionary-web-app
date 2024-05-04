@@ -14,22 +14,14 @@
         <use href="assets/icons.svg#book"></use>
       </svg>
       <div class="settings__right">
-          <details class="settings__right__fonts">
-            <summary>
-              <p>Sand serif</p>
-              <svg width="14" height="8" viewBox="0 0 14 8">
-                <use href="assets/icons.svg#arrow-down"></use>
-              </svg>
-            </summary>
-            <ul>
-              <li value="sans-serif">Sans Serif</li>
-              <li value="serif">Serif</li>
-              <li value="mono">Mono</li>
-            </ul>
-          </details>
-        <div class="settings__right__switcher">
-          <input type="checkbox" class="switcher__checkbox">
-          <button class="switcher__ball"></button>
+          <select class="dropdown">
+            <option value="sans-serif">Sans Serif</option>
+            <option value="serif">Serif</option>
+            <option value="mono">Mono</option>
+          </select>
+          <div class="component-switcher">
+          <input type="checkbox">
+          <button></button>
         </div>
         <svg width="22" viewBox="0 0 22 22">
           <use href="assets/icons.svg#moon"></use>
@@ -40,7 +32,5 @@
       <p>search</p>
     </section>
   </header>
-  <main>
-  </main>
 </body>
 </html>

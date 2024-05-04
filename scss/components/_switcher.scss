@@ -1,0 +1,15 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.component-switcher{
+  @include switchify(input, button, 4rem, 2rem);
+  background-color: $dark--1;
+  border: 3px solid $dark--1;
+  &:hover{
+    background-color: $purple--2;
+    border-color: $purple--2;
+  }
+  button{
+    background-color: $white--1;
+  }
+}

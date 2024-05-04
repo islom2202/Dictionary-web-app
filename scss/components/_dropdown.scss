@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+
+.dropdown{
+  appearance: none;
+  padding-right: 2.7rem;
+  background-image: url("../../assets/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  option:checked{
+    color: $purple--2;
+    font-weight: 500;
+  }
+}

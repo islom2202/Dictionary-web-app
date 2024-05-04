@@ -4,9 +4,6 @@
 // mobile
 header{
   @include flexify(column);
-  .settings, .search{
-    border: 1px solid;
-  }
   .settings{
     @include flexify(row, space-between, center);
     padding-inline: $inline--1;
@@ -14,33 +11,40 @@ header{
     position: relative;
     &__right{
       @include flexify(row, start, center, 2rem);
-      &__fonts{
-        user-select: none;
-        cursor: pointer;
-        position: relative;
-        summary{
-          @include flexify(row, start, center, 1rem);
-        }
-        ul{
-          @include gridify(1fr);
-          @include positify(absolute, 3.3rem auto auto 0);
-          border: 1px solid;
-          background-color: $white--1;
-          li{
-            padding: .5rem 1rem;
-          }
-          li:hover{
-            color: $purple--2;
-          }
-        }
-      }
-      &__switcher{
-        @include switchify(input, button, 4rem, 2rem);
-        background-color: $dark--1;
-        button{
-          background-color: $white--1;
-        }
-      }
+      // &__fonts{
+      //   user-select: none;
+      //   cursor: pointer;
+      //   position: relative;
+      //   summary{
+      //     @include flexify(row, start, center, 1rem);
+      //   }
+      //   ul{
+      //     @include gridify(1fr);
+      //     @include positify(absolute, 3.3rem auto auto 0);
+      //     border: 1px solid;
+      //     background-color: $white--1;
+      //     li{
+      //       padding: .5rem 1rem;
+      //     }
+      //     li:hover{
+      //       color: $purple--2;
+      //     }
+      //   }
+      // }
     }
+  }
+}
+
+// tablet
+@include responsify($breakpoint--2){
+  header{
+    padding-inline: $inline--2;
+  }
+}
+
+// desktop
+@include responsify($breakpoint--3){
+  header{
+    padding-inline: $inline--3;
   }
 }
