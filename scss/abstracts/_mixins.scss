@@ -1,3 +1,4 @@
+
 @mixin responsify($breakpoint){
   @media (min-width: $breakpoint) {
     @content;
@@ -46,4 +47,5 @@
   &:has(#{$checkbox}:checked) #{$btn}{
     inset: 0 0 auto auto;
   }
-}
+};
+
