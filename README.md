@@ -30,3 +30,8 @@
    ~~~
    sass --style compressed -w styles.scss:styles.min.css
    ~~~
+
+#### User device's theme preference
+- `@media (prefers-color-scheme: dark){...}` -- Detect user device's theme preference in css
+- `const prefersDark = window.matchMedia("(prefers-color-scheme: dark)")` -- get user's theme preference value in js
+- `prefersDark.matches && (switcher.checked = true)` - change checkbox value based on theme preference

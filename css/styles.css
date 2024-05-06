@@ -131,4 +131,11 @@ body {
   color: #FFFFFF;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #050505;
+    color: #FFFFFF;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
