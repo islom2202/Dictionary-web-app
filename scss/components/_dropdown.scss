@@ -1,14 +1,17 @@
 @use "../abstracts/variables" as *;
-
+@use "../abstracts/mixins" as *;
 .dropdown{
-  appearance: none;
-  padding-right: 2.7rem;
-  background-image: url("../../assets/icons/arrow-down.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
+  appearance: unset;
   background-color: transparent;
+  background-image: url(../../assets/icons/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  width: 11rem; // default width
+  position: relative;
   option:checked{
     color: $purple--2;
     font-weight: 500;
   }
 }
+  
+

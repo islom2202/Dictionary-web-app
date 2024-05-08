@@ -21,19 +21,27 @@ header .settings__right {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  gap: 2rem;
+  gap: 0;
+}
+header .settings__right li:first-child {
+  padding: 0.5rem 2rem 0.5rem 0;
+  border-right: 1px solid rgba(117, 117, 117, 0.3);
+}
+header .settings__right li:last-child {
+  padding: 0.5rem 0 0.5rem 2rem;
+  border-left: 1px solid rgba(117, 117, 117, 0.3);
 }
 
 @media (min-width: 768px) {
   header {
     padding-inline: 7%;
-    padding-block: 2.5rem;
+    padding-block: 3rem;
   }
 }
 @media (min-width: 1450px) {
   header {
     padding-inline: 20%;
-    padding-block: 3.5rem;
+    padding-block: 4rem;
   }
 }
 * {
@@ -82,6 +90,7 @@ input {
   border-radius: 1rem;
   background-color: #757575;
   border: 3px solid #757575;
+  position: relative;
 }
 .component-switcher input {
   position: absolute;
@@ -100,21 +109,28 @@ input {
 .component-switcher:has(input:checked) button {
   inset: 0 0 auto auto;
 }
-.component-switcher:hover {
+.component-switcher:hover, .component-switcher:has(input:checked) {
   background-color: #A445ED;
   border-color: #A445ED;
 }
 .component-switcher button {
   background-color: #FFFFFF;
 }
+.component-switcher::after {
+  content: url("../../assets/icons/moon.svg");
+  position: absolute;
+  inset: 50% -4rem auto auto;
+  transform: translateY(-50%);
+}
 
 .dropdown {
-  appearance: none;
-  padding-right: 2.7rem;
-  background-image: url("../../assets/icons/arrow-down.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
+  appearance: unset;
   background-color: transparent;
+  background-image: url(../../assets/icons/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  width: 11rem;
+  position: relative;
 }
 .dropdown option:checked {
   color: #A445ED;
@@ -130,12 +146,8 @@ body {
   background-color: #050505;
   color: #FFFFFF;
 }
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #050505;
-    color: #FFFFFF;
-  }
+.dark .dropdown option {
+  background-color: #050505;
 }
 
 /*# sourceMappingURL=styles.css.map */

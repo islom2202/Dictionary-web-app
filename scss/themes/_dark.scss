@@ -3,10 +3,7 @@
 .dark{
   background-color: $dark--2;
   color: $white--1;
-}
-@media (prefers-color-scheme: dark){
-  body{
-     background-color: $dark--2;
-    color: $white--1;
+  .dropdown option{
+    background-color: $dark--2;
   }
 }

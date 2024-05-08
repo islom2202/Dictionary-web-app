@@ -5,11 +5,18 @@
   @include switchify(input, button, 4rem, 2rem);
   background-color: $dark--1;
   border: 3px solid $dark--1;
-  &:hover{
+  position: relative;
+  &:hover, &:has(input:checked){
     background-color: $purple--2;
     border-color: $purple--2;
   }
   button{
     background-color: $white--1;
+  }
+  &::after{
+    content: url("../../assets/icons/moon.svg");
+    position: absolute;
+    inset: 50% -4rem auto auto;
+    transform: translateY(-50%);
   }
 }
