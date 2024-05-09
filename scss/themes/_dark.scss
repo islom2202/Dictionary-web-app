@@ -6,4 +6,10 @@
   .dropdown option{
     background-color: $dark--2;
   }
+  .search{
+    background-color: rgba($dark--1, 0.2);
+    input:focus{
+      border: 2px solid $dark--1;
+    }
+  }
 }

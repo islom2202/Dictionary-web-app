@@ -4,12 +4,15 @@
 // mobile
 header{
   @include flexify(column);
+  padding-block: $block--1;
+  padding-inline: $inline;
+  gap: $block--1;
+  max-width: $maxwidth;
+  margin-inline: auto;
   .settings{
     @include flexify(row, space-between, center);
-    padding-inline: $inline--1;
-    padding-block: $block--1;
     width: 100%;
-    &__right{
+    ul{
       @include flexify(row, start, center);
       li:first-child{
         padding: .5rem 2rem .5rem 0;
@@ -18,23 +21,59 @@ header{
       li:last-child{
         padding: .5rem 0 .5rem 2rem;
         border-left: 1px solid rgba($dark--1, 0.3);
+        @include flexify(_, _, center, 2rem);
       }
+    }
+  }
+  .search{
+    width: 100%;
+    height: 4rem;
+    border-radius: .5rem;
+    position: relative;
+    background-color: rgba($dark--1, 0.07);
+    input{
+      height: inherit;
+      width: inherit;
+      border-radius: inherit;
+      padding-inline: 1rem;
+      background-color: transparent;
+      &:focus{
+        border: 2px solid $purple--2;
+      }
+    }
+    img{
+      position: absolute;
+      inset: 50% 2rem auto auto;
+      transform: translateY(-50%);
     }
   }
 }
 
+
 // tablet
 @include responsify($breakpoint--2){
   header{
-    padding-inline: $inline--2;
     padding-block: $block--2;
+    gap: $block--2;
+    .search{
+      height: 5rem;
+      input{
+        padding-inline: 2rem;
+      }
+    }
   }
 }
 
 // desktop
 @include responsify($breakpoint--3){
   header{
-    padding-inline: $inline--3;
     padding-block: $block--3;
+    .search{
+      height: 7rem;
+      border-radius: 1.5rem;
+      input{
+        padding-inline: 3rem;
+      }
+    }
   }
 }

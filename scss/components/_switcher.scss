@@ -13,10 +13,4 @@
   button{
     background-color: $white--1;
   }
-  &::after{
-    content: url("../../assets/icons/moon.svg");
-    position: absolute;
-    inset: 50% -4rem auto auto;
-    transform: translateY(-50%);
-  }
 }
