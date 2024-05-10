@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 header {
   display: flex;
   flex-direction: column;
@@ -86,6 +88,43 @@ header .search img {
     padding-inline: 3rem;
   }
 }
+.result {
+  padding-inline: 5%;
+  max-width: 85rem;
+  margin-inline: auto;
+}
+.result__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.result__heading__word {
+  display: flex;
+  flex-direction: column;
+  justify-content: _;
+  align-items: _;
+  gap: 1rem;
+}
+.result__heading__word span:last-child {
+  color: #A445ED;
+  font-style: italic;
+}
+.result__heading__audio {
+  cursor: pointer;
+  border-radius: 50%;
+  fill: #A445ED;
+  background-color: rgba(164, 69, 237, 0.25);
+}
+.result__heading__audio:hover {
+  fill: #FFFFFF;
+  background-color: #a445ed;
+}
+.result__heading__audio:active {
+  opacity: 0.5;
+}
+
 * {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -96,6 +135,7 @@ header .search img {
   border: none;
   outline: none;
   color: inherit;
+  font-family: "Inter", sans-serif;
 }
 
 .heading--1 {
@@ -111,12 +151,20 @@ header .search img {
   font-weight: 400;
 }
 
+.hidden {
+  display: none;
+}
+
 .source {
   font-size: 1.6rem;
 }
 
 p, li, select, option, th, td {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+
+span {
+  font-size: inherit;
 }
 
 input {

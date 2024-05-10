@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.result{
+  padding-inline: $inline;
+  max-width: $maxwidth;
+  margin-inline: auto;
+  &__heading{
+    @include flexify(row, space-between, center);
+    &__word{
+      @include flexify(column, _, _, 1rem);
+      
+      span:last-child{
+        color: $purple--2;
+        font-style: italic;
+      }
+    }
+    &__audio{
+      cursor: pointer;
+      border-radius: 50%;
+      fill: $purple--2;
+      background-color: rgba($purple--2, 0.25);
+      &:hover{
+        fill: $white--1;
+        background-color: rgba($purple--2, 1);
+      }
+      &:active{
+        opacity: 0.5;
+      }
+    }
+  }
+}

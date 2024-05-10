@@ -8,8 +8,9 @@
   <title>dictionary web app</title>
 </head>
 <body>
+  <h1 class="hidden">dictionary web app</h1>
   <header>
-    <section class="settings">
+    <div class="settings">
       <img src="assets/icons/book.svg" alt="book">
       <ul>
         <li>
@@ -27,13 +28,23 @@
           <img src="assets/icons/moon.svg" alt="moon">
         </li>
       </ul>
-    </section>
-    <section class="search">
+    </div>
+    <div class="search">
       <input type="text" placeholder="Search for any word...">
       <img src="assets/icons/search.svg" alt="search-icon">
-    </section>
+    </div>
   </header>
-  <main></main>
+  <main class="result">
+    <div class="result__heading">
+      <h2 class="result__heading__word">
+        <span class="heading--1">hey</span>
+        <span class="heading--2">/hei/</span>
+      </h2>
+      <svg width="75" viewBox="0 0 75 75" class="result__heading__audio">
+        <use href="./assets/icons/play.svg#play-icon"></use>
+      </svg>
+    </div>
+  </main>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

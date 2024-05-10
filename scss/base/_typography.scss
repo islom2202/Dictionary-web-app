@@ -8,13 +8,18 @@
   font-size: clamp(1.6rem, 2vw, 2rem);
   font-weight: 400;
 }
+.hidden{
+  display: none;
+}
 .source{
   font-size: 1.6rem;
 }
 p,li,select, option, th, td{
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
-
+span{
+  font-size: inherit;
+}
 input{
   font-size: clamp(1.6rem, 1.5vw, 2rem);
   cursor: text;
