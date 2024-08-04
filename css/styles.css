@@ -62,15 +62,13 @@ header .search img {
   position: absolute;
   inset: 50% 2rem auto auto;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
   header {
     padding-block: 3.5rem;
     gap: 3.5rem;
-  }
-  header .search {
-    height: 5rem;
   }
   header .search input {
     padding-inline: 2rem;
@@ -81,7 +79,7 @@ header .search img {
     padding-block: 5rem;
   }
   header .search {
-    height: 7rem;
+    height: 6.8rem;
     border-radius: 1.5rem;
   }
   header .search input {
