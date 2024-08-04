@@ -1,7 +1,7 @@
 // imports
 import Theme from "./objects/theme.js"
 import Dropdown from "./objects/dropdown.js"
-
+import Search  from "./objects/search.js";
 // selectors
 const selectors = {
   bodyElement: document.body,
@@ -10,7 +10,12 @@ const selectors = {
   select: document.querySelector(".dropdown"),
   allTags: document.getElementsByTagName("*"),
   searchInput: document.querySelector(".js-search"),
-  searchIcon: document.querySelector(".js-search-icon")
+  searchIcon: document.querySelector(".js-search-icon"),
+  // data for api selectors
+  word: document.querySelector(".heading--1"),
+  phoneticTranscription: document.querySelector(".heading--2"),
+  playBtn: document.querySelector(".result__heading__audio"),
+  audio: document.querySelector('audio')
 };
 
 
@@ -27,21 +32,9 @@ selectors.select.onchange = () => {
 } 
 
 // search
-let result = null;
-selectors.searchIcon.onclick = () => fetchData()
-async function fetchData(){
-  const api = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-  try {
-    const res = await fetch(`${api}${selectors.searchInput.value}`)
-    const data = await res.json()
-    result = data
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-
+const search = new Search(selectors);
+selectors.searchIcon.onclick = () => search.fetchData();
+selectors.playBtn.onclick = () => search.play();
 
 
 
