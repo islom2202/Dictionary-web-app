@@ -29,22 +29,32 @@
         </li>
       </ul>
     </div>
-    <div class="search">
+    <div class="search" id="pulsate">
       <input type="text" placeholder="Search for any word..." class="js-search">
       <img src="assets/icons/search.svg" alt="search-icon" class="js-search-icon">
     </div>
   </header>
   <main class="result">
     <div class="result__heading">
-      <h2 class="result__heading__word">
-        <span class="heading--1">hey</span>
-        <span class="heading--2">/hei/</span>
+      <!-- <h2 class="result__heading__word">
+        <span class="heading--1" id="pulsate">hey</span>
+        <span class="heading--2" id="pulsate">/hei/</span>
       </h2>
-      <svg width="75" viewBox="0 0 75 75" class="result__heading__audio">
+      <svg width="75" viewBox="0 0 75 75" class="result__heading__audio" id="pulsate">
         <use href="./assets/icons/play.svg#play-icon"></use>
       </svg>
-      <audio src=""></audio>
+      <audio src=""></audio> -->
     </div>
+    <ul class="result__list">
+      <li class="result__list__item">
+        <h2 class="heading--2" id="pulsate">noun</h2>
+        <h3 class="heading--3" id="pulsate">Meaning</h3>
+        <ul class="result__list__item__meanings">
+          <li id="pulsate">"Hello!" or an equivalent greeting.</li>
+        </ul>
+        <small>Synonyms: <span>greeting</span></small>
+      </li>
+    </ul>
   </main>
   <script type="module" src="js/main.js"></script>
 </body>

@@ -12,10 +12,7 @@ const selectors = {
   searchInput: document.querySelector(".js-search"),
   searchIcon: document.querySelector(".js-search-icon"),
   // data for api selectors
-  word: document.querySelector(".heading--1"),
-  phoneticTranscription: document.querySelector(".heading--2"),
-  playBtn: document.querySelector(".result__heading__audio"),
-  audio: document.querySelector('audio')
+  resultHeading: document.querySelector(".result__heading"),
 };
 
 
@@ -33,9 +30,11 @@ selectors.select.onchange = () => {
 
 // search
 const search = new Search(selectors);
-selectors.searchIcon.onclick = () => search.fetchData();
-selectors.playBtn.onclick = () => search.play();
-
+   /* fetch data*/
+   let data;
+   selectors.searchIcon.onclick = () => data = search.fetchData();
+   /* generate HTML*/
+   search.generateHTML(data);
 
 
 

@@ -2,6 +2,7 @@
 @use '../abstracts/variables' as *;
 
 .result{
+
   padding-inline: $inline;
   max-width: $maxwidth;
   margin-inline: auto;
@@ -27,6 +28,35 @@
       &:active{
         opacity: 0.5;
       }
+    }
+  }
+  &__list{
+    h2{
+      margin-block: 4rem;
+      &::after{
+        content: '';
+        display: block;
+        position: relative;
+        inset: -1.3rem auto auto 10rem;
+        height: 0.15rem;
+        background-color: $white--1;
+        width: calc(100% - 10rem);
+      }
+    }
+    h3{
+      color: $dark--1;
+    }
+    &__item__meanings{
+      li{
+        list-style: disc;
+        margin: 2rem 0 2rem 7%;
+        &::marker{
+          color: $purple--2;
+        }
+      }
+    }
+    small span{
+      color: $purple--2;
     }
   }
 }

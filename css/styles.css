@@ -122,6 +122,31 @@ header .search img {
 .result__heading__audio:active {
   opacity: 0.5;
 }
+.result__list h2 {
+  margin-block: 4rem;
+}
+.result__list h2::after {
+  content: "";
+  display: block;
+  position: relative;
+  inset: -1.3rem auto auto 10rem;
+  height: 0.15rem;
+  background-color: #FFFFFF;
+  width: calc(100% - 10rem);
+}
+.result__list h3 {
+  color: #757575;
+}
+.result__list__item__meanings li {
+  list-style: disc;
+  margin: 2rem 0 2rem 7%;
+}
+.result__list__item__meanings li::marker {
+  color: #A445ED;
+}
+.result__list small span {
+  color: #A445ED;
+}
 
 * {
   font-size: 62.5%;
@@ -145,7 +170,7 @@ header .search img {
 }
 
 .heading--3 {
-  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
   font-weight: 400;
 }
 
@@ -157,8 +182,12 @@ header .search img {
   font-size: 1.6rem;
 }
 
-p, li, select, option, th, td {
+p, select, option, th, td {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+
+li, small {
+  font-size: clamp(1.5rem, 2vw, 1.6rem);
 }
 
 span {
