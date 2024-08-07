@@ -33,14 +33,14 @@
   &__list{
     h2{
       margin-block: 4rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
       &::after{
         content: '';
-        display: block;
-        position: relative;
-        inset: -1.3rem auto auto 10rem;
-        height: 0.15rem;
-        background-color: $white--1;
-        width: calc(100% - 10rem);
+        height: 0.1rem;
+        background-color: $dark--1;
+        flex-grow: 1;
       }
     }
     h3{
@@ -52,6 +52,13 @@
         margin: 2rem 0 2rem 7%;
         &::marker{
           color: $purple--2;
+        }
+        span{
+          display: block;
+        }
+        span:nth-child(2){
+          color: $dark--1;
+          margin: 1rem 0 0 1rem;
         }
       }
     }

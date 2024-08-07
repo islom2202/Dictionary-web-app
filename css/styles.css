@@ -124,15 +124,15 @@ header .search img {
 }
 .result__list h2 {
   margin-block: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 .result__list h2::after {
   content: "";
-  display: block;
-  position: relative;
-  inset: -1.3rem auto auto 10rem;
-  height: 0.15rem;
-  background-color: #FFFFFF;
-  width: calc(100% - 10rem);
+  height: 0.1rem;
+  background-color: #757575;
+  flex-grow: 1;
 }
 .result__list h3 {
   color: #757575;
@@ -143,6 +143,13 @@ header .search img {
 }
 .result__list__item__meanings li::marker {
   color: #A445ED;
+}
+.result__list__item__meanings li span {
+  display: block;
+}
+.result__list__item__meanings li span:nth-child(2) {
+  color: #757575;
+  margin: 1rem 0 0 1rem;
 }
 .result__list small span {
   color: #A445ED;

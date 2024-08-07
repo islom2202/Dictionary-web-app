@@ -13,6 +13,7 @@ const selectors = {
   searchIcon: document.querySelector(".js-search-icon"),
   // data for api selectors
   resultHeading: document.querySelector(".result__heading"),
+  resultList: document.querySelector(".result__list")
 };
 
 
@@ -29,12 +30,17 @@ selectors.select.onchange = () => {
 } 
 
 // search
-const search = new Search(selectors);
-   /* fetch data*/
-   let data;
-   selectors.searchIcon.onclick = () => data = search.fetchData();
-   /* generate HTML*/
-   search.generateHTML(data);
+const search = new Search(selectors); 
+selectors.searchIcon.onclick = async () =>{
+    /* fetch data*/
+    const data = await search.fetchData()
+    /* generate HTML*/
+    const [playBtn] = search.generateHTML(data)
+    /* add functions to generated HTML*/
+    playBtn.onclick = () => search.playWord();
+} 
+   
+   
 
 
 

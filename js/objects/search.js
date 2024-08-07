@@ -24,8 +24,29 @@ class Search {
         <use href="./assets/icons/play.svg#play-icon"></use>
       </svg>
       <audio src=${returnPhonetics("audio")}></audio>
-   `
+    `
+    let resultList = []
+    data.meanings.forEach(
+      (e) =>
+        (resultList += `
+    <li class="result__list__item">
+        <h2 class="heading--2" id="pulsate">${e.partOfSpeech}</h2>
+        <h3 class="heading--3" id="pulsate">Meaning</h3>
+        <ul class="result__list__item__meanings">
+          <li id="pulsate">
+          ${e.definitions.map(
+            (def) =>
+              `<span>${def.definition}</span>
+               <span>" ${def.example} "</span>`
+          )}
+          </li>
+        </ul>
+        <small>Synonyms: ${e.synonyms.map((syn) => ` <span>${syn}</span>`)}</small>
+      </li>
+      `)
+    )
     this.selectors.resultHeading.innerHTML = resultHeading
+    this.selectors.resultList.innerHTML = resultList
     function returnPhonetics(value) {
       for (let i = 0; i < data.phonetics.length; i++) {
         if (data.phonetics[i][value]) {
@@ -33,13 +54,10 @@ class Search {
         }
       }
     }
-    // play audio
-    document.querySelector(".result__heading__audio").onclick = () => {
-      document.querySelector("audio").play()
-    }
+    return [document.querySelector(".result__heading__audio")]
   }
-  // functions
-  play() {
+  // add functions to generated HTML
+  playWord() {
     document.querySelector("audio").play()
   }
 }
