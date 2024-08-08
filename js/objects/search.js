@@ -20,7 +20,7 @@ class Search {
         <span class="heading--1">${data.word}</span>
         <span class="heading--2">${returnPhonetics("text")}</span>
       </h2>
-      <svg width="75" viewBox="0 0 75 75" class="result__heading__audio">
+      <svg  viewBox="0 0 75 75" class="result__heading__playBtn">
         <use href="./assets/icons/play.svg#play-icon"></use>
       </svg>
       <audio src=${returnPhonetics("audio")}></audio>
@@ -33,15 +33,25 @@ class Search {
         <h2 class="heading--2" id="pulsate">${e.partOfSpeech}</h2>
         <h3 class="heading--3" id="pulsate">Meaning</h3>
         <ul class="result__list__item__meanings">
-          <li id="pulsate">
-          ${e.definitions.map(
-            (def) =>
-              `<span>${def.definition}</span>
-               <span>" ${def.example} "</span>`
-          )}
-          </li>
+          
+          ${e.definitions
+            .map(
+              (def) =>
+                `<li id="pulsate">
+                <span>${def.definition}</span>
+                 ${def.example ? `<span>" ${def.example} "</span>` : ""}
+               </li>`
+            )
+            .join("")}
+         
         </ul>
-        <small>Synonyms: ${e.synonyms.map((syn) => ` <span>${syn}</span>`)}</small>
+        ${
+          e.synonyms.length > 0 ? `
+          <small>Synonyms: ${e.synonyms.map(
+            (syn) => ` <span>${syn}</span>`
+          )}</small>`: ""
+        }
+        
       </li>
       `)
     )
@@ -54,7 +64,7 @@ class Search {
         }
       }
     }
-    return [document.querySelector(".result__heading__audio")]
+    return [document.querySelector(".result__heading__playBtn")]
   }
   // add functions to generated HTML
   playWord() {

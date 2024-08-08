@@ -109,17 +109,18 @@ header .search img {
   color: #A445ED;
   font-style: italic;
 }
-.result__heading__audio {
+.result__heading__playBtn {
   cursor: pointer;
   border-radius: 50%;
+  width: clamp(6.5rem, 7vw, 8rem);
   fill: #A445ED;
   background-color: rgba(164, 69, 237, 0.25);
 }
-.result__heading__audio:hover {
+.result__heading__playBtn:hover {
   fill: #FFFFFF;
   background-color: #a445ed;
 }
-.result__heading__audio:active {
+.result__heading__playBtn:active {
   opacity: 0.5;
 }
 .result__list h2 {
