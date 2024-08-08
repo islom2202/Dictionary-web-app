@@ -31,15 +31,17 @@ selectors.select.onchange = () => {
 
 // search
 const search = new Search(selectors); 
-selectors.searchIcon.onclick = async () =>{
-    /* fetch data*/
-    const data = await search.fetchData()
-    /* generate HTML*/
-    const [playBtn] = search.generateHTML(data)
-    /* add functions to generated HTML*/
-    playBtn.onclick = () => search.playWord();
-} 
-   
+selectors.searchIcon.onclick = () => startSearch();
+selectors.searchInput.onkeydown = (e) => e.key == 'Enter' ? startSearch() : null; 
+
+const startSearch = async() => {
+  /* fetch data*/
+  const data = await search.fetchData()
+  /* generate HTML*/
+  const [playBtn] = search.generateHTML(data)
+  /* add functions to generated HTML*/
+  playBtn.onclick = () => search.playWord()
+}
    
 
 
