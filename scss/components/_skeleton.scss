@@ -1,22 +1,26 @@
  @use '../abstracts/variables' as *;
-//  #pulsate{
-//     animation: pulsate 1s ease infinite;
-//     background-color: $dark--1;
-//     color: $dark--1;
-//     border-radius: 0.5rem;
-//     fill: $dark--1;
-//     &::after{
-//       background-color:$dark--1;
-//     }
-//     &::marker{
-//       color: $dark--1;
-//     }
-//   }
-//   @keyframes pulsate {
-//     30%{
-//       opacity: 0.7;
-//     }
-//     70%{
-//       opacity: 0.9;
-//     }
-//   }
+ #pulsate *{
+      animation: pulsate 1s ease infinite;
+      border-radius: 0.5rem;
+      background-color: $dark--1;
+      color: $dark--1;
+      fill: $dark--1;
+      &::after{
+        background-color:$dark--1;
+      }
+      &::marker{
+        color: $dark--1;
+      }
+    }
+ 
+  @keyframes pulsate {
+    30%{
+      opacity: 0.7;
+    }
+    70%{
+      opacity: 0.9;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

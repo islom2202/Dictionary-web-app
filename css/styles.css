@@ -182,10 +182,6 @@ header .search img {
   font-weight: 400;
 }
 
-.hidden {
-  display: none;
-}
-
 .source {
   font-size: 1.6rem;
 }
@@ -205,6 +201,10 @@ span {
 input {
   font-size: clamp(1.6rem, 1.5vw, 2rem);
   cursor: text;
+}
+
+.hidden, .hidden * {
+  display: none;
 }
 
 .component-switcher {
@@ -254,6 +254,43 @@ input {
 .dropdown option:checked {
   color: #A445ED;
   font-weight: 500;
+}
+
+#pulsate * {
+  animation: pulsate 1s ease infinite;
+  border-radius: 0.5rem;
+  background-color: #757575;
+  color: #757575;
+  fill: #757575;
+}
+#pulsate *::after {
+  background-color: #757575;
+}
+#pulsate *::marker {
+  color: #757575;
+}
+
+@keyframes pulsate {
+  30% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+.notFound h1 {
+  font-size: clamp(3rem, 5vw, 6rem);
 }
 
 body {

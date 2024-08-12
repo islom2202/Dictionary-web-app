@@ -1,7 +1,7 @@
-// imports
-import Theme from "./objects/theme.js"
-import Dropdown from "./objects/dropdown.js"
-import Search  from "./objects/search.js";
+// import classes
+import Theme from "./classes/theme.js"
+import Dropdown from "./classes/dropdown.js"
+import Search  from "./classes/search.js";
 // selectors
 const selectors = {
   bodyElement: document.body,
@@ -38,9 +38,9 @@ const startSearch = async() => {
   /* fetch data*/
   const data = await search.fetchData()
   /* generate HTML*/
-  const [playBtn] = search.generateHTML(data)
+  const [playBtn] = data ? search.generateHTML(data) : '';
   /* add functions to generated HTML*/
-  playBtn.onclick = () => search.playWord()
+  if(playBtn) playBtn.onclick = () => search.playWord()
 }
    
 

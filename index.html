@@ -29,28 +29,34 @@
         </li>
       </ul>
     </div>
-    <div class="search" id="pulsate">
+    <div class="search">
       <input type="text" placeholder="Search for any word..." class="js-search">
       <img src="assets/icons/search.svg" alt="search-icon" class="js-search-icon">
     </div>
   </header>
   <main class="result">
-    <div class="result__heading">
-      <!-- <h2 class="result__heading__word">
+    <section class="notFound hidden">
+      <h1>😕</h1>
+      <h2 class="heading--2">No Definitions Found</h2>
+      <small>Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</small>
+    </section>
+
+    <div class="result__heading" >
+      <h2 class="result__heading__word">
         <span class="heading--1" id="pulsate">hey</span>
         <span class="heading--2" id="pulsate">/hei/</span>
       </h2>
       <svg width="75" viewBox="0 0 75 75" class="result__heading__playBtn" id="pulsate">
         <use href="./assets/icons/play.svg#play-icon"></use>
       </svg>
-      <audio src=""></audio> -->
+      <audio src="https://api.dictionaryapi.dev/media/pronunciations/en/hey-au.mp3"></audio>
     </div>
     <ul class="result__list">
       <li class="result__list__item">
-        <h2 class="heading--2" id="pulsate">noun</h2>
-        <h3 class="heading--3" id="pulsate">Meaning</h3>
+        <h2 class="heading--2">noun</h2>
+        <h3 class="heading--3">Meaning</h3>
         <ul class="result__list__item__meanings">
-          <li id="pulsate">
+          <li>
             <span>"Hello!" or an equivalent greeting.</span>
             <span>Hello</span>
           </li>
