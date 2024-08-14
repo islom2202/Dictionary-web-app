@@ -26,9 +26,9 @@
     ~~~
     sass --watch styles.scss:styles.css
     ~~~
-4. To compile scss into minified css type folowing:
+4. To compile scss into minified css type folowing (according to this project's directory):
    ~~~
-   sass --style compressed -w styles.scss:styles.min.css
+   --style compressed -w scss/styles.scss:css/styles.min.css
    ~~~
 
 #### User device's theme preference
