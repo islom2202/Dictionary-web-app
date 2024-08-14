@@ -5,8 +5,11 @@ class Search {
   }
   // fetch data
   async fetchData() {
-    const api = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+    let word = this.selectors.resultHeading
+    let definition = this.selectors.resultList
+    addPulsateId(word, definition)
     try {
+      const api = "https://api.dictionaryapi.dev/api/v2/entries/en/"
       const res = await fetch(`${api}${this.selectors.searchInput.value}`)
       let [data] = await res.json()
       return data
@@ -16,12 +19,11 @@ class Search {
     }
   }
 
-  // generate html
+  // generate html, remove pulsateId and return playBtn
   generateHTML(data) {
     let word = this.selectors.resultHeading;
     let definition = this.selectors.resultList;
     removeHidden(word, definition);
-    addPulsateId(word, definition);
     addHidden(document.querySelector(".notFound"))
     let resultList = []
     data.meanings.forEach(

@@ -6,7 +6,6 @@ export function removeHidden(...RestParams) {
 }
 export function addPulsateId(...RestParams) {
   RestParams.forEach((param) => param.id = 'pulsate');
-  RestParams.forEach((param) => param.setAttribute('id', 'pulsate'));
 }
 export function removePulsateId(...RestParams){
    RestParams.forEach((param) => (param.id = ''))
